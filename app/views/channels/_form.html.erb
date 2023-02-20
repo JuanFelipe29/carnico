@@ -1,0 +1,82 @@
+<%= form_with(model: channel) do |form| %>
+  <% if channel.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(channel.errors.count, "error") %> prohibited this channel from being saved:</h2>
+
+      <ul>
+        <% channel.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :income_type, style: "display: block" %>
+    <%= form.text_field :income_type %>
+  </div>
+
+  <div>
+    <%= form.label :family_id, style: "display: block" %>
+    <%= form.text_field :family_id %>
+  </div>
+
+  <div>
+    <%= form.label :supplier_id, style: "display: block" %>
+    <%= form.text_field :supplier_id %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :crotal, style: "display: block" %>
+    <%= form.text_field :crotal %>
+  </div>
+
+  <div>
+    <%= form.label :lot, style: "display: block" %>
+    <%= form.text_field :lot %>
+  </div>
+
+  <div>
+    <%= form.label :weight, style: "display: block" %>
+    <%= form.number_field :weight %>
+  </div>
+
+  <div>
+    <%= form.label :temperature, style: "display: block" %>
+    <%= form.text_field :temperature %>
+  </div>
+
+  <div>
+    <%= form.label :cost, style: "display: block" %>
+    <%= form.number_field :cost %>
+  </div>
+
+  <div>
+    <%= form.label :total, style: "display: block" %>
+    <%= form.number_field :total %>
+  </div>
+
+  <div>
+    <%= form.label :slaughter, style: "display: block" %>
+    <%= form.date_field :slaughter %>
+  </div>
+
+  <div>
+    <%= form.label :birth, style: "display: block" %>
+    <%= form.date_field :birth %>
+  </div>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

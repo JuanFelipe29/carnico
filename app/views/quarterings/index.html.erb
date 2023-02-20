@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Quarterings</h1>
+
+<div id="quarterings">
+  <% @quarterings.each do |quartering| %>
+    <%= render quartering %>
+    <p>
+      <%= link_to "Show this quartering", quartering %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New quartering", new_quartering_path %>

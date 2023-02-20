@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @quartering %>
+
+<div>
+  <%= link_to "Edit this quartering", edit_quartering_path(@quartering) %> |
+  <%= link_to "Back to quarterings", quarterings_path %>
+
+  <%= button_to "Destroy this quartering", @quartering, method: :delete %>
+</div>

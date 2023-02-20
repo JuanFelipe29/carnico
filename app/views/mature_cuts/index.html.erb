@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Mature cuts</h1>
+
+<div id="mature_cuts">
+  <% @mature_cuts.each do |mature_cut| %>
+    <%= render mature_cut %>
+    <p>
+      <%= link_to "Show this mature cut", mature_cut %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New mature cut", new_mature_cut_path %>

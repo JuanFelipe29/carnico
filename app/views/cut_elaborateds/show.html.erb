@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @cut_elaborated %>
+
+<div>
+  <%= link_to "Edit this cut elaborated", edit_cut_elaborated_path(@cut_elaborated) %> |
+  <%= link_to "Back to cut elaborateds", cut_elaborateds_path %>
+
+  <%= button_to "Destroy this cut elaborated", @cut_elaborated, method: :delete %>
+</div>

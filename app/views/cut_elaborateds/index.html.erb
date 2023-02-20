@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Cut elaborateds</h1>
+
+<div id="cut_elaborateds">
+  <% @cut_elaborateds.each do |cut_elaborated| %>
+    <%= render cut_elaborated %>
+    <p>
+      <%= link_to "Show this cut elaborated", cut_elaborated %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New cut elaborated", new_cut_elaborated_path %>

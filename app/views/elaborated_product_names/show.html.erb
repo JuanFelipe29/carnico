@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @elaborated_product_name %>
+
+<div>
+  <%= link_to "Edit this elaborated product name", edit_elaborated_product_name_path(@elaborated_product_name) %> |
+  <%= link_to "Back to elaborated product names", elaborated_product_names_path %>
+
+  <%= button_to "Destroy this elaborated product name", @elaborated_product_name, method: :delete %>
+</div>

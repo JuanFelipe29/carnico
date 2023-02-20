@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @mature_cut %>
+
+<div>
+  <%= link_to "Edit this mature cut", edit_mature_cut_path(@mature_cut) %> |
+  <%= link_to "Back to mature cuts", mature_cuts_path %>
+
+  <%= button_to "Destroy this mature cut", @mature_cut, method: :delete %>
+</div>

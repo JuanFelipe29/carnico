@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Elaborated product names</h1>
+
+<div id="elaborated_product_names">
+  <% @elaborated_product_names.each do |elaborated_product_name| %>
+    <%= render elaborated_product_name %>
+    <p>
+      <%= link_to "Show this elaborated product name", elaborated_product_name %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New elaborated product name", new_elaborated_product_name_path %>

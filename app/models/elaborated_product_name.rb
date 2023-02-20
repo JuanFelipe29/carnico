@@ -1,0 +1,2 @@
+class ElaboratedProductName < ApplicationRecord
+end

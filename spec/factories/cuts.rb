@@ -1,9 +1,9 @@
 FactoryBot.define do
   factory :cut do
-    piece { nil }
-    cut_name { nil }
+    association :piece
+    association :cut_name
+
     weight { 1 }
     final_weight { 1 }
-    processing_type { "MyString" }
   end
 end

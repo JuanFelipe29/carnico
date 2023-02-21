@@ -13,12 +13,12 @@
 
   <div>
     <%= form.label :quartering_id, style: "display: block" %>
-    <%= form.text_field :quartering_id %>
+    <%= form.collection_select :quartering_id, Quartering.order(:lot), :id, :lot, { prompt: 'Seleccione el lote'} %>
   </div>
 
   <div>
     <%= form.label :piece_name_id, style: "display: block" %>
-    <%= form.text_field :piece_name_id %>
+    <%= form.collection_select :piece_name_id, PieceName.order(:name), :id, :name, { prompt: 'Seleccione el nombre de la pieza'} %>
   </div>
 
   <div>

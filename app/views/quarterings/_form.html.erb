@@ -13,7 +13,7 @@
 
   <div>
     <%= form.label :channel_id, style: "display: block" %>
-    <%= form.text_field :channel_id %>
+    <%= form.collection_select :channel_id, Channel.all, :id, :lot, { prompt: 'Seleccione el canal'} %>
   </div>
 
   <div>
@@ -24,11 +24,6 @@
   <div>
     <%= form.label :date, style: "display: block" %>
     <%= form.datetime_field :date %>
-  </div>
-
-  <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
   </div>
 
   <div>

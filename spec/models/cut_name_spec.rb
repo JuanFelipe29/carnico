@@ -1,5 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe CutName, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'factory' do
+    it 'creates a valid fatory' do
+      expect(build(:cut_name).valid?). to eq true
+    end
+  end
 end

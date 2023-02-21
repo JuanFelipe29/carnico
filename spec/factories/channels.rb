@@ -1,8 +1,10 @@
 FactoryBot.define do
   factory :channel do
+    association :user
+    association :supplier
+    association :family
+
     income_type { "MyString" }
-    family { nil }
-    supplier { nil }
     description { "MyText" }
     crotal { "MyString" }
     lot { "MyString" }
@@ -12,6 +14,5 @@ FactoryBot.define do
     total { 1 }
     slaughter { "2023-02-20" }
     birth { "2023-02-20" }
-    user { nil }
   end
 end

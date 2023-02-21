@@ -12,7 +12,7 @@ class ElaboratedProductNamesController < ApplicationController
 
   # GET /elaborated_product_names/new
   def new
-    @elaborated_product_name = ElaboratedProductName.new
+    @elaborated_product_name = ElaboratedProductName.new(cut_id: params[:cut_id])
   end
 
   # GET /elaborated_product_names/1/edit

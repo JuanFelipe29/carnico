@@ -12,13 +12,12 @@
   <% end %>
 
   <div>
-    <%= form.label :cut_id, style: "display: block" %>
-    <%= form.text_field :cut_id %>
+    <%= form.hidden_field :cut_id %>
   </div>
 
   <div>
     <%= form.label :elaborated_product_name_id, style: "display: block" %>
-    <%= form.text_field :elaborated_product_name_id %>
+    <%= form.collection_select :elaborated_product_name_id, ElaboratedProductName.order(:name), :id, :name, { prompt: 'Seleccione el nombre del producto eleborado' } %>
   </div>
 
   <div>

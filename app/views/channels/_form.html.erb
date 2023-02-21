@@ -18,12 +18,12 @@
 
   <div>
     <%= form.label :family_id, style: "display: block" %>
-    <%= form.text_field :family_id %>
+    <%= form.collection_select :family_id, Family.order(:name), :id, :name, { prompt: 'Seleccione la familia'} %>
   </div>
 
   <div>
     <%= form.label :supplier_id, style: "display: block" %>
-    <%= form.text_field :supplier_id %>
+    <%= form.collection_select :supplier_id, Supplier.order(:name), :id, :name, { prompt: 'Seleccione el proveedor'} %>
   </div>
 
   <div>
@@ -69,11 +69,6 @@
   <div>
     <%= form.label :birth, style: "display: block" %>
     <%= form.date_field :birth %>
-  </div>
-
-  <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
   </div>
 
   <div>

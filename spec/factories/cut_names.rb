@@ -1,6 +1,7 @@
 FactoryBot.define do
   factory :cut_name do
+    association :piece
+
     name { "MyString" }
-    piece { nil }
   end
 end

@@ -13,12 +13,12 @@
 
   <div>
     <%= form.label :piece_id, style: "display: block" %>
-    <%= form.text_field :piece_id %>
+    <%= form.collection_select :piece_id, Piece.includes(:piece_name).all, :id, :name, { prompt: 'Seleccione la pieza'} %>
   </div>
 
   <div>
     <%= form.label :cut_name_id, style: "display: block" %>
-    <%= form.text_field :cut_name_id %>
+    <%= form.collection_select :cut_name_id, CutName.order(:name), :id, :name, { prompt: 'Seleccione el nombre del corte'} %>
   </div>
 
   <div>
@@ -29,11 +29,6 @@
   <div>
     <%= form.label :final_weight, style: "display: block" %>
     <%= form.number_field :final_weight %>
-  </div>
-
-  <div>
-    <%= form.label :processing_type, style: "display: block" %>
-    <%= form.text_field :processing_type %>
   </div>
 
   <div>

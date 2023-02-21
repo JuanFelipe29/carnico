@@ -50,6 +50,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails' 
 gem 'font_awesome5_rails'
+gem 'mini_racer'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
@@ -66,6 +67,7 @@ group :development, :test do
   gem 'rubocop-rspec', '~> 2.12', '>= 2.12.1', require: false
   gem 'factory_bot_rails'
   gem 'byebug'
+  gem 'faker'
 end
 
 group :development do
@@ -84,4 +86,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem 'shoulda-matchers', '~> 5.0'
 end

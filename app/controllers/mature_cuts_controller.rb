@@ -12,7 +12,7 @@ class MatureCutsController < ApplicationController
 
   # GET /mature_cuts/new
   def new
-    @mature_cut = MatureCut.new
+    @mature_cut = MatureCut.new(cut_id: params[:cut_id])
   end
 
   # GET /mature_cuts/1/edit

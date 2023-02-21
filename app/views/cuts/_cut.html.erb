@@ -24,4 +24,7 @@
     <%= cut.processing_type %>
   </p>
 
+  <%= link_to 'Madurado', new_mature_cut_path(cut_id: cut.id) %>
+  <%= link_to 'Elaborado', new_cut_elaborated_path(cut_id: cut.id) %>
+  <%= link_to 'Final', cut_elaborateds_path({ cut: { processing_type: 'FinalCut' } }), data: { 'turbo-method': :patch } %>
 </div>

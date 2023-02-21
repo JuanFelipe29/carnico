@@ -18,7 +18,7 @@
 
   <div>
     <%= form.label :piece_id, style: "display: block" %>
-    <%= form.text_field :piece_id %>
+    <%= form.collection_select :piece_id, Piece.includes(:piece_name).all, :id, :name, { prompt: 'Seleccione la pieza'} %>
   </div>
 
   <div>

@@ -1,5 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe CutElaborated, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'valid factory' do
+    expect(build(:cut_elaborated).valid?). to eq true
+  end
 end
